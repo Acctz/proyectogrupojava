@@ -9,5 +9,5 @@ package aplicacion;
  * @author augusto
  */
 public class factura {
-    
+    int[]a = new int[2];
 }
