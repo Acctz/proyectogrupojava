@@ -2,6 +2,7 @@
 package aplicacion;
 
 public class factura {
+<<<<<<< HEAD
 
     public double[] getPreciosUnitarios() {
         return preciosUnitarios;
@@ -125,4 +126,7 @@ public class factura {
     
     }
     
+=======
+    int[]a = new int[2];
+>>>>>>> cfb7be777d2bc1e63994a1ba6ad5d89072c42c04
 }
