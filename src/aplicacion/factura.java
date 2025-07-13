@@ -1,7 +1,7 @@
 
 package aplicacion;
 
-public class factura {
+public class Factura {
 <<<<<<< HEAD
 
     public double[] getPreciosUnitarios() {

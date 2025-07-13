@@ -3,6 +3,10 @@ package aplicacion;
 
 
 public class Producto {
+        private String codigo;
+    private String nombre;
+    private double precioUnitario;
+    private String descripcion;
 
     public String getCodigo() {
         return codigo;
@@ -35,23 +39,6 @@ public class Producto {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    
-    private String codigo;
-    private String nombre;
-    private double precioUnitario;
-    private String descripcion;
-        
-   
-
-    
-
-    public void mostrarProducto(){
-        imprime los datos delproducto.
-    }
-    String getCodigo()
-    public double getPrecioUnitario(){
-        devuelven los valores.
-     }
     
     
     
