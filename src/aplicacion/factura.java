@@ -2,14 +2,19 @@
 package aplicacion;
 
 public class Factura {
-<<<<<<< HEAD
-
-    public double[] getPreciosUnitarios() {
-        return preciosUnitarios;
+    private String numeroFactura;
+    private String fechaEmision;
+    private Cliente cliente;
+    private Detalle[] detalles;
+    private int cantidadDetalles;
+    private double subtotal;
+    private double igv;
+    private double total;
+    
+    public void agregarDetalle(Producto producto, int cantidad){
+        
     }
-
-    public void setPreciosUnitarios(double[] preciosUnitarios) {
-        this.preciosUnitarios = preciosUnitarios;
+    public void calcularTotales(){
     }
 
     public String getNumeroFactura() {
@@ -28,28 +33,28 @@ public class Factura {
         this.fechaEmision = fechaEmision;
     }
 
-    public String getClienteNombre() {
-        return clienteNombre;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setClienteNombre(String clienteNombre) {
-        this.clienteNombre = clienteNombre;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
-    public String getClienteDocumento() {
-        return clienteDocumento;
+    public Detalle[] getDetalles() {
+        return detalles;
     }
 
-    public void setClienteDocumento(String clienteDocumento) {
-        this.clienteDocumento = clienteDocumento;
+    public void setDetalles(Detalle[] detalles) {
+        this.detalles = detalles;
     }
 
-    public int getCantidadItems() {
-        return cantidadItems;
+    public int getCantidadDetalles() {
+        return cantidadDetalles;
     }
 
-    public void setCantidadItems(int cantidadItems) {
-        this.cantidadItems = cantidadItems;
+    public void setCantidadDetalles(int cantidadDetalles) {
+        this.cantidadDetalles = cantidadDetalles;
     }
 
     public double getSubtotal() {
@@ -75,58 +80,7 @@ public class Factura {
     public void setTotal(double total) {
         this.total = total;
     }
-
-    public String[] getCodigosProductos() {
-        return codigosProductos;
+        
     }
-
-    public void setCodigosProductos(String[] codigosProductos) {
-        this.codigosProductos = codigosProductos;
-    }
-
-    public int[] getCantidades() {
-        return cantidades;
-    }
-
-    public void setCantidades(int[] cantidades) {
-        this.cantidades = cantidades;
-    }
-    
-    private String numeroFactura;
-    private String fechaEmision ;
-    private String clienteNombre;
-    private String clienteDocumento;
-    private int cantidadItems;
-    private double subtotal;
-    private double igv;
-    private double total;
-    private String[] codigosProductos;
-    private int[] cantidades;
-    private double[] preciosUnitarios;
-    
-
-    
- public void agregarItem(String codigo, int cantidad, double precio){
-    
-        agrega un producto a la factura
-    }
-
-   public void calcularSubtotal(){
-        subtotal = (cantidad[i] * precio[i]);
-    }
-   public void calcularIGV(){
-       aplica IGV como 18% del subtotal
-    }   
-   public void calcularTotal(){
-       total = (subtotal + igv);
-     }
-   public void mostrarFactura(){
-           
-      muestra todos los datos de la factura(cliente, ítems, totales)
-    
-    }
-    
-=======
-    int[]a = new int[2];
->>>>>>> cfb7be777d2bc1e63994a1ba6ad5d89072c42c04
-}
+   
+   

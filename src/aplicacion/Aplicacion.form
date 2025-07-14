@@ -41,50 +41,6 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel1">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Registrar Producto">
-                <Property name="tabTitle" type="java.lang.String" value="Registrar Producto"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1122" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="591" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel2">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Registrar Cliente">
-                <Property name="tabTitle" type="java.lang.String" value="Registrar Cliente"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1122" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="591" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -113,26 +69,32 @@
                                           <Component id="jlbNombreProducto" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jlbPrecioUnitario" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jlbCantidad" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jlbDocumentoCliente1" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jtxtDireccionCliente" min="-2" pref="188" max="-2" attributes="0"/>
+                                          <Component id="txtDireccionCliente" min="-2" pref="188" max="-2" attributes="0"/>
                                           <Group type="102" attributes="0">
-                                              <Component id="jtxtCodigoProducto" min="-2" pref="188" max="-2" attributes="0"/>
+                                              <Component id="txtCodigoProducto" min="-2" pref="188" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jbtnBuscarProducto" max="32767" attributes="0"/>
+                                              <Component id="btnBuscarProducto" max="32767" attributes="0"/>
                                           </Group>
-                                          <Component id="JtxtNombreProducto" min="-2" pref="188" max="-2" attributes="0"/>
-                                          <Component id="jtxtPrecioUnitario" min="-2" pref="188" max="-2" attributes="0"/>
-                                          <Component id="jtxtCantidad" min="-2" pref="188" max="-2" attributes="0"/>
-                                          <Component id="jTextField9" min="-2" pref="188" max="-2" attributes="0"/>
-                                          <Component id="jtxtNombreCliente" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
-                                          <Component id="jtxtTelefonoCliente" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jtxtDocumentoCliente" min="-2" pref="188" max="-2" attributes="0"/>
+                                          <Component id="txtNombrePro" min="-2" pref="188" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="txtPrecioUnit" min="-2" pref="188" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jbtnBuscarCliente" min="-2" pref="116" max="-2" attributes="0"/>
+                                              <Component id="btnAñadirProducto" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="txtCantidad" min="-2" pref="188" max="-2" attributes="0"/>
+                                          <Component id="txtNombreCli" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
+                                          <Component id="txtTelefonoCliente" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="txtFecha" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtDocumentoCliente" alignment="0" pref="188" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="btnBuscarCliente" min="-2" pref="116" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -140,7 +102,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
-                              <Component id="jbtnGenerarFactura" min="-2" pref="147" max="-2" attributes="0"/>
+                              <Component id="btnGenerarFactura" min="-2" pref="147" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
@@ -158,57 +120,58 @@
                               <Component id="jScrollPane1" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jlbDocumentoCliente1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jlbDocumentoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtxtDocumentoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jbtnBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDocumentoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jlbNombreCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtxtNombreCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNombreCli" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jlbTelefonoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtxtTelefonoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTelefonoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jlbDireccionCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtxtDireccionCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDireccionCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jlbCodigoProducto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtxtCodigoProducto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jbtnBuscarProducto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCodigoProducto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnBuscarProducto" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jlbNombreProducto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="JtxtNombreProducto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNombrePro" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jlbPrecioUnitario" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtxtPrecioUnitario" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPrecioUnit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAñadirProducto" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jlbCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtxtCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jScrollPane2" min="-2" pref="44" max="-2" attributes="0"/>
-                              <EmptySpace pref="28" max="32767" attributes="0"/>
-                              <Component id="jbtnGenerarFactura" min="-2" pref="54" max="-2" attributes="0"/>
+                              <EmptySpace pref="30" max="32767" attributes="0"/>
+                              <Component id="btnGenerarFactura" min="-2" pref="54" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
@@ -265,59 +228,45 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cantidad"/>
-                <Property name="toolTipText" type="java.lang.String" value=""/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
+            <Component class="javax.swing.JTextField" name="txtDocumentoCliente">
             </Component>
-            <Component class="javax.swing.JTextField" name="jtxtDocumentoCliente">
+            <Component class="javax.swing.JTextField" name="txtNombreCli">
             </Component>
-            <Component class="javax.swing.JTextField" name="jtxtNombreCliente">
+            <Component class="javax.swing.JTextField" name="txtTelefonoCliente">
             </Component>
-            <Component class="javax.swing.JTextField" name="jtxtTelefonoCliente">
+            <Component class="javax.swing.JTextField" name="txtDireccionCliente">
             </Component>
-            <Component class="javax.swing.JTextField" name="jtxtDireccionCliente">
+            <Component class="javax.swing.JTextField" name="txtCodigoProducto">
             </Component>
-            <Component class="javax.swing.JTextField" name="jtxtCodigoProducto">
+            <Component class="javax.swing.JTextField" name="txtNombrePro">
             </Component>
-            <Component class="javax.swing.JTextField" name="JtxtNombreProducto">
+            <Component class="javax.swing.JTextField" name="txtPrecioUnit">
             </Component>
-            <Component class="javax.swing.JTextField" name="jtxtPrecioUnitario">
+            <Component class="javax.swing.JTextField" name="txtCantidad">
             </Component>
-            <Component class="javax.swing.JTextField" name="jtxtCantidad">
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField9">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jbtnBuscarCliente">
+            <Component class="javax.swing.JButton" name="btnBuscarCliente">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Buscar cliente"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnBuscarClienteActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarClienteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jbtnBuscarProducto">
+            <Component class="javax.swing.JButton" name="btnBuscarProducto">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Buscar Producto"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnBuscarProductoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarProductoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jbtnGenerarFactura">
+            <Component class="javax.swing.JButton" name="btnGenerarFactura">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Generar Factura"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnGenerarFacturaActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGenerarFacturaActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -343,6 +292,275 @@
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
                 <Component class="javax.swing.JTextArea" name="jtxtMensajeError">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="btnA&#xf1;adirProducto">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="A&#xf1;adir Producto"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnA&#xf1;adirProductoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jlbDocumentoCliente1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtFecha">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Registrar Producto">
+                <Property name="tabTitle" type="java.lang.String" value="Registrar Producto"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel3" min="-2" pref="126" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtPrecioUnitario" min="-2" pref="164" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                      <Component id="btnAgregarProducto" min="-2" pref="113" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel2" min="-2" pref="126" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtNombreProducto" min="-2" pref="164" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel1" min="-2" pref="126" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtCodigo" min="-2" pref="164" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="jScrollPane3" min="-2" pref="439" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="585" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="txtCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="txtNombreProducto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="txtPrecioUnitario" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAgregarProducto" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="33" max="32767" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="341" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Codigo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Precio Unitario"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtCodigo">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNombreProducto">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPrecioUnitario">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnAgregarProducto">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Agregar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarProductoActionPerformed"/>
+              </Events>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="txaMostrarProductos">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Registrar Cliente">
+                <Property name="tabTitle" type="java.lang.String" value="Registrar Cliente"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel7" min="-2" pref="124" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtTelefono" min="-2" pref="160" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                      <Component id="btnRegistrarCliente" min="-2" pref="103" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel6" min="-2" pref="124" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtDrirecion" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel5" min="-2" pref="124" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtDocumento" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel4" min="-2" pref="124" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtNombreCliente" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                              <Component id="jScrollPane4" min="-2" pref="445" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="587" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel4" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="txtNombreCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel5" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="txtDocumento" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel6" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="txtDrirecion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel7" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="txtTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnRegistrarCliente" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane4" min="-2" pref="340" max="-2" attributes="0"/>
+                      <EmptySpace pref="21" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Documento (RUC/DNI)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel7">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefono"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNombreCliente">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtDocumento">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtDrirecion">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtTelefono">
+            </Component>
+            <Component class="javax.swing.JButton" name="btnRegistrarCliente">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Registrar"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="txaMostrarClientes">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>

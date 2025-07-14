@@ -3,7 +3,7 @@ package aplicacion;
 
 
 public class Producto {
-        private String codigo;
+    private String codigo;
     private String nombre;
     private double precioUnitario;
     private String descripcion;
