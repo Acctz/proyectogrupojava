@@ -7,7 +7,13 @@ public class Producto {
     private String nombre;
     private double precioUnitario;
     private String descripcion;
-
+    
+    public Producto(String codigo, String nombre, double precioUnitario){
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precioUnitario = precioUnitario;
+    }
+    
     public String getCodigo() {
         return codigo;
     }

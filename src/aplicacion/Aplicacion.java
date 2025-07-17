@@ -29,8 +29,6 @@ public class Aplicacion extends javax.swing.JFrame {
         initComponents();
         sistema = new SistemaFacturacion();
         ActualizaListaProductos();
-        clienteSeleccionado = new Cliente();
-        productoSelecionado = new Producto();
         productosSelecionados = new Producto[20];
         cantidadesSeleccionadas = new int[20];
     }
@@ -89,7 +87,7 @@ public class Aplicacion extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtNombreCliente = new javax.swing.JTextField();
         txtDocumento = new javax.swing.JTextField();
-        txtDrirecion = new javax.swing.JTextField();
+        txtDireccion = new javax.swing.JTextField();
         txtTelefono = new javax.swing.JTextField();
         btnRegistrarCliente = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -344,6 +342,11 @@ public class Aplicacion extends javax.swing.JFrame {
         jLabel7.setText("Telefono");
 
         btnRegistrarCliente.setText("Registrar");
+        btnRegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarClienteActionPerformed(evt);
+            }
+        });
 
         txaMostrarClientes.setColumns(20);
         txaMostrarClientes.setRows(5);
@@ -367,7 +370,7 @@ public class Aplicacion extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtDrirecion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -395,7 +398,7 @@ public class Aplicacion extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDrirecion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -445,6 +448,7 @@ public class Aplicacion extends javax.swing.JFrame {
         
         int posicion = sistema.buscarProducto(txtCodigoProducto.getText());
         if (posicion != -1) {
+            System.out.println(posicion);
             productoSelecionado = sistema.getProductos()[posicion];
             txtNombrePro.setText(productoSelecionado.getNombre());
             txtPrecioUnit.setText(String.valueOf(productoSelecionado.getPrecioUnitario()));
@@ -482,18 +486,19 @@ public class Aplicacion extends javax.swing.JFrame {
         sistema.registrarFactura(factura);        
         String resumenFactura = "";
         resumenFactura += "Factura N°: "+ factura.getNumeroFactura() + "\n";
-        resumenFactura += "Factura N°: "+ factura.getFechaEmision() + "\n";
+        resumenFactura += "Fecha: "+ factura.getFechaEmision() + "\n";
         resumenFactura += "Cliente: " + factura.getCliente().getNombre()+"\n";
         resumenFactura += "Documento" + clienteSeleccionado.getDocumento() + "\n\n";
         resumenFactura += "Detalles de la compra: \n";
+        resumenFactura += "CODIGO\tNOMBRE\tCANTIDAD\tPRECIO UNITARIO\tIMPORTE\n";
         for (int i = 0; i < factura.getCantidadDetalles(); i++) {
             Detalle detalle = factura.getDetalles()[i];
             double subtotalItem = detalle.calcularSubtotal();
-            resumenFactura += "- "+detalle.getProducto().getCodigo() + " |Nombre: "+ detalle.getProducto().getNombre()
-                    + " |Cant: "+ detalle.getCantidad() + " | Precio: $ " + detalle.getProducto().getPrecioUnitario() 
+            resumenFactura += detalle.getProducto().getCodigo() + "\t"+ detalle.getProducto().getNombre()
+                    + "\t"+ detalle.getCantidad() + "\t$ " + detalle.getProducto().getPrecioUnitario()  + "\t\t$ "
                             + String.format("%.2f", subtotalItem )+  "\n";
         }
-        resumenFactura += "\nSubtotal: $ "+String.format("%.2f", factura.getSubtotal()+"\n");
+        resumenFactura += "\nSubtotal: $ "+String.format("%.2f", factura.getSubtotal())+"\n";
         resumenFactura += "IGV(18%): $ "+String.format("%.2f", factura.getIgv())+"\n";
         resumenFactura += "Total: $ "+String.format("%.2f", factura.getTotal())+"\n";
         
@@ -558,26 +563,49 @@ public class Aplicacion extends javax.swing.JFrame {
     
     }
     private void btnAgregarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProductoActionPerformed
-        String codigo = txtCodigoProducto.getText();
-        String nombre = txtNombreCliente.getText();
+        String codigo = txtCodigo.getText();
+        String nombre = txtNombreProducto.getText();
         String precioTexto = txtPrecioUnitario.getText();
         
         if (codigo.equals("")|| nombre.equals("") || precioTexto.equals("") ) {
             JOptionPane.showMessageDialog(this, "Llene todos los campos");
             return;
         }
-        double precio = Double.parseDouble(precioTexto);
+        double precioUnitario = Double.parseDouble(precioTexto);
         if (sistema.buscarProducto(codigo) != -1 ) {
             JOptionPane.showMessageDialog(this, "Ya existe un producto con este codigo");
             return;
         }
-        sistema.registrarProducto(codigo, nombre, precio);
+        sistema.registrarProducto(codigo, nombre, precioUnitario);
         JOptionPane.showMessageDialog(this, "Producto registrado correctamente.");
         ActualizaListaProductos();
         txtCodigoProducto.setText("");
         txtNombreProducto.setText("");
         txtPrecioUnitario.setText("");
     }//GEN-LAST:event_btnAgregarProductoActionPerformed
+
+    private void btnRegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarClienteActionPerformed
+        String documento = txtDocumento.getText();
+        String nombre = txtNombreCliente.getText();
+        String direccion = txtDireccion.getText();
+        String telefono = txtTelefono.getText();
+        
+        if (documento.equals("")|| nombre.equals("") || direccion.equals("") || telefono.equals("") ) {
+            JOptionPane.showMessageDialog(this, "Llene todos los campos");
+            return;
+        }
+        if (sistema.buscarCliente(documento) != -1 ) {
+            JOptionPane.showMessageDialog(this, "Ya existe un producto con este codigo");
+            return;
+        }
+        sistema.registrarCliente(documento, nombre, direccion, telefono);
+        JOptionPane.showMessageDialog(this, "Cliente registrado correctamente.");
+        ActualizaListaProductos();
+        txtNombreCli.setText("");
+        txtDocumentoCliente.setText("");
+        txtDireccionCliente.setText("");
+        txtTelefonoCliente.setText("");
+    }//GEN-LAST:event_btnRegistrarClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -642,10 +670,10 @@ public class Aplicacion extends javax.swing.JFrame {
     private javax.swing.JTextField txtCantidad;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtCodigoProducto;
+    private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtDireccionCliente;
     private javax.swing.JTextField txtDocumento;
     private javax.swing.JTextField txtDocumentoCliente;
-    private javax.swing.JTextField txtDrirecion;
     private javax.swing.JTextField txtFecha;
     private javax.swing.JTextField txtNombreCli;
     private javax.swing.JTextField txtNombreCliente;

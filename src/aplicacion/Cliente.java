@@ -6,6 +6,17 @@ public class Cliente {
     private String documento;
     private String direccion;
     private String telefono;
+    
+    public Cliente(){
+    }
+    
+    public Cliente( String documento, String nombre, String direccion, String telefono){
+        this.documento = documento;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        
+    }
 
     public String getNombre() {
         return nombre;

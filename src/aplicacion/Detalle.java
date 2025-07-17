@@ -5,8 +5,13 @@ public class Detalle {
     private Producto producto;
     private int cantidad;
     
+    public Detalle(Producto producto, int cantidad){
+        this.cantidad = cantidad;
+        this.producto = producto;
+    }
+    
     public double calcularSubtotal(){
-        double subtotal = 0;
+        double subtotal = cantidad * producto.getPrecioUnitario();
         return subtotal;
     }
 

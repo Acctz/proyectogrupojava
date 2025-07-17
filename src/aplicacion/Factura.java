@@ -5,16 +5,26 @@ public class Factura {
     private String numeroFactura;
     private String fechaEmision;
     private Cliente cliente;
-    private Detalle[] detalles;
-    private int cantidadDetalles;
+    private Detalle[] detalles = new Detalle[50];
+    private int cantidadDetalles = 0;
     private double subtotal;
     private double igv;
     private double total;
     
     public void agregarDetalle(Producto producto, int cantidad){
-        
+        if (cantidadDetalles < detalles.length) {
+            Detalle nuevoDetalle = new Detalle(producto, cantidad);
+            detalles[cantidadDetalles]= nuevoDetalle;
+            cantidadDetalles++;
+        }
     }
     public void calcularTotales(){
+        subtotal = 0;
+        for (int i = 0; i < cantidadDetalles; i++) {
+            subtotal += detalles[i].calcularSubtotal();
+        }
+        igv = subtotal * 0.18;
+        total = subtotal + igv;
     }
 
     public String getNumeroFactura() {
